@@ -9,15 +9,29 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cobidev/simplefolio"
+    "url": "git+https://github.com/zweistein1326/portfolio"
   },
-  "keywords": [],
-  "author": "Jacobo Martinez",
+  "keywords": [
+    "Siddharth Agarwal",
+    "Siddharth",
+    "Agarwal",
+    "zweistein1326",
+    "Siddharth HKU",
+    "Siddharth Agarwal HKU",
+    "HKU",
+    "Payphone",
+    "Markit",
+    "Mark-it",
+    "MarkIt",
+    "MarkIT",
+    "Siddharth Agarwal DPS RK Puram",
+  ],
+  "author": "Siddharth Agarwal",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/cobidev/simplefolio/issues"
+    "url": "https://github.com/zweistein1326/portfolio/issues"
   },
-  "homepage": "https://github.com/cobidev/simplefolio#readme",
+  "homepage": "https://github.com/zweistein1326/portfolio/blob/master/README.md",
   "devDependencies": {
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.4.2",
