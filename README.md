@@ -1,0 +1,11 @@
+# portfolio
+my finished portfolio
+
+Siddharth Agarwal's finished portfolio
+
+To initiate
+1. clone the repository
+2. navigate the the folder
+3. npm install
+4. npm start
+
