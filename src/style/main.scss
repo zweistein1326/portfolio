@@ -1,0 +1,35 @@
+@import './vendors/bootstrap.scss';
+
+@import './abstracts/mixins';
+@import './abstracts/variables';
+@import './abstracts/helpers';
+
+@import './base/base';
+@import './base/typography';
+
+@import './components/buttons';
+
+@import './layout/footer';
+@import './layout/sections';
+
+@import './sections/about';
+@import './sections/contact';
+@import './sections/hero';
+@import './sections/projects';
+@import './sections/skills';
+
+.skill-custom {
+    .progress {
+        height: 6px;
+        margin-bottom: 40px;
+        margin-top: 5px;
+    }
+
+    .progress-bar {
+        background: black;
+    }
+}
+
+.clearfix {
+    font-size: 14px;
+}

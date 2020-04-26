@@ -1,0 +1,2 @@
+var quotes = ['Good health is the key to a better life.', 'Your work shows your capabilities.', 'Develop habits that develop you.', 'Motivation gets you started, Habits keep you going.', 'It\'s always dark before the sun rises.', 'We all have the ability. The difference is how we use it'];
+document.getElementById('quote').innerHTML = quotes[Math.floor(Math.random() * quotes.length)];
