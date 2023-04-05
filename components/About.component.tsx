@@ -22,12 +22,12 @@ const About = () => {
         cgpa:'3.4',
         max_cgpa:'4.3'
     };
-    const [category, setCategory] = useState<'professional' | 'personal'>('professional');
+    const [category, setCategory] = useState<'professional' | 'personal'>('personal');
     return (
-        <Styled.Container style={{paddingBottom:140}}>
+        <div>
             <AboutTab setCategory={setCategory} category={category}/>
             <Description category={category}/>
-        </Styled.Container>
+        </div>
     )
 }
 

@@ -18,10 +18,10 @@ export default function Home() {
       <main style={{background:'#FFF', color:'#000'}}>
         <Header/>
         <Hero/>
-        <Timeline/>
+        {/* <Timeline/> */}
         {/* <Work/> */}
         {/* <Projects/> */}
-        <About/>
+        {/* <About/> */}
       </main>
     </>
   )

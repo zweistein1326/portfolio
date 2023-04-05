@@ -1,6 +1,6 @@
 const Sign = () => {
     return (
-        <p style={{fontSize:32, fontFamily:'allura, cursive', fontStyle:'italic', color:'#000'}}>Sid</p>
+        <p style={{fontSize:20, fontStyle:'normal', color:'#000', width:'25vw', textAlign:'right', paddingRight:24}}>Siddharth Agarwal</p>
     )
 }
 

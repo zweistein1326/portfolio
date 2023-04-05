@@ -1,38 +1,35 @@
 const { styled } = require("@mui/system");
 
 const Header = styled('header')({
-    position:'relative',
+    position:'fixed',
+    top: 0,
     display:'flex', 
     flexDirection:'row', 
     alignItems:'center', 
     justifyContent:'space-between', 
-    height:'12vh', 
+    height:'10vh', 
     background:'#FFF', 
-    borderBottom:'1px solid #000', 
-    position:'absolute', 
+    boxShadow:'0px 0px 4px rgba(0,0,0,0.8)',
     top:0, 
     left:0, 
     width:'100%', 
-    padding:'0px 120px',
+    zIndex: 1000,
 })
 
 const Container = styled('div')(({hero, row=false})=>({
     display:'flex',
     alignItems: hero ? '' : 'center',
     flexDirection: row ? 'row' : 'column',
-    paddingTop: hero ? 'calc(12vh + 40px)' : '4vh',
     paddingLeft: '180px',
     paddingRight: '180px',
     width:'100%',
-    minHeight: '100vh',
+    height: 'calc(100vh - 10vh)'
 }))
 
 const InnerContainer = styled('div')((props)=>({
     display:'flex',
     alignItems:'center',
-    
     flexDirection: props.row ? 'row' : 'column',
-    paddingTop: props.hero ? 'calc(12vh + 40px)' : '10vh',
     width:'100%',
 }))
 
@@ -59,6 +56,11 @@ const Row = styled('div')({
     alignItems:'center'
 })
 
+const Column = styled('div')({
+    display:'flex',
+    flexDirection:'column',
+})
+
 const Sign = styled('p')({
     
 })
@@ -83,5 +85,6 @@ export default {
     Header,
     InnerContainer,
     Row,
+    Column,
     ValueCircle
 }

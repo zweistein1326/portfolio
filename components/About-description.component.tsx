@@ -30,11 +30,15 @@ interface SubDescProps {
 
 const PersonalDescription = ({description}: SubDescProps) => {
     return (
-        <Styled.InnerContainer style={{marginTop:40}} id='about'>
+        <Styled.InnerContainer style={{marginTop:12, marginLeft: 16, paddingRight:24}} id='about'>
             {/* <SectionTitle title={"ABOUT-ME"}/> */}
-            <p style={{fontSize:20, textAlign:'center'}}>
-                {description.description.map((d:string, index:number)=><li key={index} style={{textAlign:'left'}}>{d}</li>)}
-            </p>
+            <ul>
+                {description.description.map((d:string, index:number)=><li key={index} style={{textAlign:'left'}}>
+                    <Typography variant="body1" style={{fontSize:16}}>
+                        {d}
+                    </Typography></li>
+                )}
+            </ul>
             <Grid container spacing={0} style={{marginTop:40}}>
                 {description.items.map((item, index)=> <DescriptionTile item={item} index={index} key={index}/>)}
             </Grid>
@@ -64,12 +68,15 @@ const ProfessionalDescriptionTile = ({item, index}: TileProps) => {
 
 const ProfessionalDescription = ({description}: SubDescProps) => {
     return (
-        <Styled.InnerContainer style={{marginTop:40}} id='about'>
+        <Styled.InnerContainer style={{marginTop:12, marginLeft: 16}} id='about'>
             {/* <SectionTitle title={"ABOUT-ME"}/> */}
-            <Typography variant="body1" style={{fontSize:20, textAlign:'center'}}>
-                {description.description.map((d:string, index:number)=><li key={index} style={{textAlign:'left'}}>{d}</li>)}
-            </Typography>
-            <div style={{display:'flex', flexDirection:'column', alignItems:'center', marginTop:40}}>
+            <ul>
+                {description.description.map((d:string, index:number)=> <li key={index}>
+                    <Typography variant="body1" style={{fontSize:16}}>{d}
+                    </Typography>
+                </li>)}
+            </ul>
+            {/* <div style={{display:'flex', flexDirection:'column', alignItems:'center', marginTop:40}}>
                 <Typography variant='h3' style={{textAlign:'left', marginTop:"40px"}}>Past Projects</Typography>
                 <Grid container spacing={0} style={{marginTop:40}}>
                     {description.items.map((item:any, index:number)=> <ProfessionalDescriptionTile item={item} index={index} key={index}/>)}
@@ -90,7 +97,7 @@ const ProfessionalDescription = ({description}: SubDescProps) => {
                 <Row style={{alignItems:'center', position:'relative', zIndex:98, flexWrap:'wrap', marginTop:20}}>
                     {tags.map((tag:string, index:number)=><p style={{margin:'8px', boxShadow:'0px 0px 4px rgba(0,0,0,0.4)', borderRadius:20, padding:'8px 16px'}} key={index}>#{tag}</p>)}
                 </Row>
-            </div>
+            </div> */}
         </Styled.InnerContainer>
     )
 }
