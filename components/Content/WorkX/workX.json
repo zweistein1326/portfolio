@@ -1,0 +1,23 @@
+[
+    {
+        "company": "ParallelChain Lab",
+        "title": "Software Engineer",
+        "start-date": "April 2022",
+        "end-date": "April 2023",
+        "url" : "https://parallelchain.io/"
+    },
+    {
+        "company": "Roju Ltd.",
+        "title": "Software Engineering Intern",
+        "start-date": "March 2021",
+        "end-date": "November 2021",
+        "url" : "https://roju.app/"
+    },
+    {
+        "company": "First Code Academy",
+        "title": "Programming Instructor",
+        "start-date": "May 2019",
+        "end-date": "Aug 2019",
+        "url" : "https://www.firstcodeacademy.com/"
+    }
+]

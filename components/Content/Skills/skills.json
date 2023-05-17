@@ -1,0 +1,144 @@
+{
+    "Frontend Development" : [
+        {
+            "title" : "ReactJS / NextJS",
+            "rate" : 5
+        },
+        {
+            "title" : "Expo / React Native",
+            "rate" : 5
+        },
+        {
+            "title" : "Redux Toolkit",
+            "rate" : 5
+        },
+        {
+            "title" : "Jest UA",
+            "rate" : 5
+        },
+        {
+            "title" : "HTML / CSS / JS",
+            "rate" : 5
+        },
+        {
+            "title" : "Bootstrap / Material-UI / SCSS",
+            "rate" : 5
+        },
+        {
+            "title": "SEO",
+            "rate": 5
+        },
+        {
+            "title" : "jQuery / Ajax / XML",
+            "rate" : 5
+        },
+        {
+            "title" : "Web Assembly",
+            "rate" : 5
+        },
+        {
+            "title" : "RestAPIs / WebSockets / Axios",
+            "rate" : 5
+        }
+    ],
+    "API Development": [
+        {
+            "title" : "Express.js / NodeJS",
+            "rate" : 5
+        },
+        {
+            "title" : "Firebase / MongoDB",
+            "rate" : 5
+        },
+        {
+            "title" : "MySQL / Postgres",
+            "rate" : 5
+        },
+        {
+            "title" : "GCP / AWS",
+            "rate" : 5
+        },
+        {
+            "title" : "3rd party APIs",
+            "rate" : 5
+        }
+    ],
+    "Programming Languages": [
+        {
+            "title" : "JavaScript",
+            "rate" : 5
+        },
+        {
+            "title" : "TypeScript",
+            "rate" : 5
+        },
+        {
+            "title" : "Python",
+            "rate" : 5
+        },
+        {
+            "title" : "Swift",
+            "rate" : 5
+        },
+        {
+            "title" : "Rust",
+            "rate" : 5
+        },
+        {
+            "title" : "Dart",
+            "rate" : 5
+        },
+        {
+            "title" : "C++",
+            "rate" : 5
+        },
+        {
+            "title" : "Lisp",
+            "rate" : 5
+        },
+        {
+            "title" : "SQL",
+            "rate" : 5
+        }
+    ],
+    "Product Design": [
+        {
+            "title" : "Figma",
+            "rate" : 5
+        },
+        {
+            "title" : "Jira",
+            "rate" : 5
+        },
+        {
+            "title" : "Google Analytics",
+            "rate" : 5
+        },
+        {
+            "title" : "Mixpanel",
+            "rate" : 5
+        },
+        {
+            "title" : "User Research",
+            "rate" : 5
+        },
+        {
+            "title" : "UX Design",
+            "rate" : 5
+        }
+    ],
+    "Others" : [
+        {
+            "title" : "Vercel / Netlify / Heroku",
+            "rate" : 5
+        },
+        {
+            "title" : "Git / Github / Gitlab",
+            "rate" : 5
+        },
+        {
+            "title" : "Shell Scripting",
+            "rate" : 5
+        }
+    ]
+}

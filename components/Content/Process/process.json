@@ -1,0 +1,54 @@
+[
+    {
+        "step": "Pre-Process",
+        "items" : [
+            "Collect Information",
+            "User Personas",
+            "SetUp Goals",
+            "Project Folder + Moodbaord"
+        ]
+    },
+    {
+        "step": "Low Fidelity",
+        "items" : [
+            "Whiteboard",
+            "Maps Screen Info",
+            "Possible States",
+            "First Diagram"
+        ]
+    },
+    {
+        "step": "Work/Design",
+        "items" : [
+            "Moodboard",
+            "First Diagram",
+            "Product write up",
+            "Intern Test"
+        ]
+    },
+    {
+        "step": "Assets & Delivery",
+        "items" : [
+            "Specifications",
+            "Diagram",
+            "Final Prototype",
+            "Video x WriteUp"
+        ]
+    },
+    {
+        "step": "Final & Test",
+        "items" : [
+            "Inspectlet x hotjar",
+            "Mixpanel",
+            "Google Analytics",
+            "Intercom"
+        ]
+    },
+    {
+        "step": "After Design",
+        "items" : [
+            "Goals",
+            "Workspace"        
+        ]
+    }
+]

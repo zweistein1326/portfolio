@@ -3,15 +3,40 @@ import { red } from "@mui/material/colors";
 
 const theme = createTheme({
   typography: {
-    fontFamily: "'Poppins', sans-serif",
+    fontFamily: "'Plus Jakarta Sans', sans-serif",
     allVariants: {
       color: "#000000",
     },
+    h1: {
+      fontSize: '32px',
+      fontWeight: 600,
+      lineHeight: '48px'
+    },
+    h2: {
+      fontSize: '24px',
+      fontWeight: 400,
+      lineHeight: '40px'
+    },
+    h3: {
+      fontSize: '20px',
+      fontWeight: 400,
+      lineHeight: '32px'
+    },
+    h4: {
+      fontSize: '20px',
+      fontWeight: 400,
+      lineHeight: '24px'
+    },
+    p: {
+      fontSize: '16px',
+      fontWeight: 400,
+      lineHeight: '24px'
+    }
   },
   components: {
     MuiCssBaseline: {
       styleOverrides: `@font-face{
-                    font-family: "'Poppins', sans-serif";
+                    font-family: "'Plus Jakarta Sans', sans-serif";
                     font-style: 'normal';
                     color: red';
                 }`,
@@ -19,7 +44,7 @@ const theme = createTheme({
   },
   palette: {
     text: {
-      primary: "#000000",
+      primary: "#FFFFFF",
     },
     primary: {
       main: "#0066FF",

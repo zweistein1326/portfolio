@@ -18,6 +18,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "CONSTANTS.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "CONSTANTS.js", "components/Content/Contact/contact.component.jsx"],
   "exclude": ["node_modules"]
 }
