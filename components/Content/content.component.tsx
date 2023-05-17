@@ -3,7 +3,7 @@ import { styled } from "@mui/material";
 const Content = ({children, minHeight='40vh', id, maxWidth}: any) => {
     return (
         // @ts-ignore
-        <Container minHeight={minHeight} id={`#${id}`} maxWidth={maxWidth}>
+        <Container minHeight={minHeight} id={`${id}`} maxWidth={maxWidth}>
             {children}
         </Container>
     )

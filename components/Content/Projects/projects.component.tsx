@@ -21,13 +21,17 @@ const Projects = () => {
 
 const ProjectTile = ({project, index}: any) => {
     return (
-        <Grid item xs={12} sm={6} md={4} style={{display:'flex', flexDirection:'column', maxWidth:'280px', margin: '20px', borderRadius: 20, backgroundColor:'#FFF', overflow:'hidden', position:'relative'}}>
-            <Image src={project.image_uri} width={280} height={280} alt={project.title}/>
-            <Box style={{padding: "20px", display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center'}}>
-                <ProjectStatus status={project.status}/>
-                <Typography variant="h3" style={{fontWeight:'bold', textDecoration:'underline'}}><a href={project.url}>{project.title}</a></Typography>
-                {/* @ts-ignore */}
-                <Typography variant="p" style={{color:'#000', textAlign:'center'}}>{project.description}</Typography>
+        <Grid item xs={12} sm={6} md={4} style={{display:'flex', flexDirection:'column', padding:'12px', borderRadius: 20, overflow:'hidden', position:'relative'}}>
+            <Box style={{height: '100%', display:'flex', flexDirection:'column', borderRadius: 20, backgroundColor:'#FFF', overflow:'hidden', position:'relative'}}>
+                <Box style={{height:320, width:'100%', position:'relative'}}>
+                    <Image src={project.image_uri} fill={true} alt={project.title}/>
+                </Box>
+                <Box style={{padding: "20px", display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center'}}>
+                    <ProjectStatus status={project.status}/>
+                    <Typography variant="h3" style={{fontWeight:'bold', textDecoration:'underline'}}><a href={project.url}>{project.title}</a></Typography>
+                    {/* @ts-ignore */}
+                    <Typography variant="p" style={{color:'#000', textAlign:'center'}}>{project.description}</Typography>
+                </Box>
             </Box>
             {/* <Typography variant="h2">{project.languages}</Typography> */}
         </Grid>

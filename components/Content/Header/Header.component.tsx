@@ -16,17 +16,21 @@ const Header = () => {
             <StyledHeader>
                 <Sign />
                 <div style={{paddingLeft: 24}}>
-                    <ul style={{display:'flex', flexDirection:'row', listStyleType:'none', color:'#FFF'}}> 
-                        <li style={{margin:20}}><a href={socials.github}><GitHub /></a></li>
-                        <li style={{margin:20}}><a href={socials.linkedin}><LinkedIn /></a></li>
-                        <li style={{margin:20}}><a href={socials.twitter}><Twitter /></a></li>
-                        <li style={{margin:20}}><a href={socials.email}><Email /></a></li>
-                    </ul>
+                    <SocialIconsContainer style={{display:'flex', flexDirection:'row', listStyleType:'none', color:'#FFF'}}> 
+                        <li style={{marginLeft:20}}><a href={socials.github}><GitHub /></a></li>
+                        <li style={{marginLeft:20}}><a href={socials.linkedin}><LinkedIn /></a></li>
+                        <li style={{marginLeft:20}}><a href={socials.twitter}><Twitter /></a></li>
+                        <li style={{marginLeft:20}}><a href={socials.email}><Email /></a></li>
+                    </SocialIconsContainer>
                 </div>
             </StyledHeader>
         </Container>
     )
 }
+
+const SocialIconsContainer = styled('ul')((props) => ({
+    
+}));
 
 const Container = styled('div')((props) => ({
     position:'fixed',
@@ -41,6 +45,11 @@ const Container = styled('div')((props) => ({
     left:0, 
     width:'100%', 
     zIndex: 1000,
+    [props.theme.breakpoints.down('md')]: {
+        height:'8vh',
+        padding: '0 32px'
+    }
+    
 }))
 
 const StyledHeader = styled('header')({

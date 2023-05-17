@@ -10,31 +10,31 @@ const Skills = () => {
         <Content id={"SKILLSET"} maxWidth={'100%'}>
             <SectionHeading>Skills</SectionHeading>
             <Box style={{width:'100%', borderTop: '1px solid #FFF'}}>
-                {Object.keys(data).map((key) => <SkillBox skills={data[key]} title={key} key={key}/>)}
+                {Object.keys(data).map((key) => <Skill skills={data[key]} title={key} key={key}/>)}
             </Box>
         </Content>
     )
 }
 
-const SkillBox = ({title, skills, key}) => {
+const Skill = ({title, skills, key}) => {
     const [isActive, setIsActive] = useState(false);
 
     return (
         <SkillContainer isActive={isActive}>
             <Box style={{width:'100%', maxWidth:'960px', padding:'20px 0'}}>
-                <Box style={{width:'100%', display:'flex', flexDirection:'row', alignItems:'center', justifyContent:'space-between', borderBottom: isActive ? '3px solid #171717' : '', paddingTop:'8px', paddingBottom: isActive ? '20px' : '8px', cursor:'pointer'}} onClick={()=>{setIsActive(!isActive)}}>
+                <SkillHeadingBox isActive={isActive} onClick={()=>{setIsActive(!isActive)}}>
                     <Typography variant="h1" style={{color: isActive? '#000' : '#FFF'}}>{title}</Typography>
-                    {!isActive ? <ExpandMoreIcon style={{fontSize: 32}}/> : <ExpandMoreIcon style={{transform:'rotate(180deg)', fontSize: 32, color:'#000'}}/>}
-                </Box>
-                {isActive && <Box style={{display:'flex', flexDirection:'row', flexWrap:'wrap', justifyContent:'flex-start'}}>
-                    {skills.map((skill, index) => <SkillTile key={index} skill={skill}/>)}
-                </Box>}
+                    {!isActive ? <ExpandMoreIcon style={{fontSize: 32, color:'#FFF'}}/> : <ExpandMoreIcon style={{transform:'rotate(180deg)', fontSize: 32, color:'#000'}}/>}
+                </SkillHeadingBox>
+                {isActive && <SubSkillsContainer>
+                    {skills.map((skill, index) => <SubSkillTile key={index} skill={skill}/>)}
+                </SubSkillsContainer>}
             </Box>
         </SkillContainer>
     )
 }
 
-const SkillTile = ({skill}) => {
+const SubSkillTile = ({skill}) => {
 
     const bgColor = (()=>{
         const r = Math.floor(Math.random() * 10);
@@ -52,6 +52,33 @@ const SkillTile = ({skill}) => {
         </Box>
     )
 }
+
+const SkillHeadingBox = styled(Box)((props) => ({
+    width:'100%', 
+    display:'flex', 
+    flexDirection:'row', 
+    alignItems:'center', 
+    justifyContent:'space-between', 
+    borderBottom: props.isActive ? '3px solid #171717' : '', 
+    paddingTop:'8px', 
+    paddingBottom: props.isActive ? '20px' : '8px', 
+    cursor:'pointer',
+    [props.theme.breakpoints.down('md')]: {
+        padding:'0 20px',
+        paddingTop:'8px',
+        paddingBottom: props.isActive ? '20px' : '8px', 
+    }
+}));
+
+const SubSkillsContainer = styled(Box)((props) => ({
+    display:'flex', 
+    flexDirection:'row',
+    flexWrap:'wrap', 
+    justifyContent:'flex-start',
+    [props.theme.breakpoints.down('md')]: {
+        padding:'0 20px',
+    }
+}));
 
 const SkillContainer = styled(Box)((props) => ({
     backgroundColor: props.isActive ? 'rgba(255, 255, 255, 1)' : 'rgba(255,255,255,0.1)',

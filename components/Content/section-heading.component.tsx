@@ -8,7 +8,7 @@ const SectionHeading = ({children}: any) => {
     )
 }
 
-const Heading = styled('h1')(()=>({
+const Heading = styled('h1')((props: any)=>({
     fontStyle: 'normal',
     fontWeight: 700,
     fontSize: '48px',
@@ -18,7 +18,10 @@ const Heading = styled('h1')(()=>({
     WebkitTextStrokeWidth: 2,
     WebkitTextStrokeColor: '#FFFFFF',
     textTransform:'uppercase',
-    padding: '5vh 0'
+    padding: '5vh 0',
+    [props.theme.breakpoints.down('md')]: {
+        fontSize: '36px',
+    },
 }))
 
 export default SectionHeading;

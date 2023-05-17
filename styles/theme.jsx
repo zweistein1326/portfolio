@@ -10,22 +10,42 @@ const theme = createTheme({
     h1: {
       fontSize: '32px',
       fontWeight: 600,
-      lineHeight: '48px'
+      lineHeight: '48px',
+      ['@media (max-width:600px)']: { // eslint-disable-line no-useless-computed-key
+        fontSize: '24px',
+        fontWeight: 400,
+        lineHeight: '40px'
+      }
     },
     h2: {
       fontSize: '24px',
       fontWeight: 400,
-      lineHeight: '40px'
+      lineHeight: '40px',
+      ['@media (max-width:600px)']: { // eslint-disable-line no-useless-computed-key
+        fontSize: '20px',
+        fontWeight: 400,
+        lineHeight: '32px'
+      }
     },
     h3: {
       fontSize: '20px',
       fontWeight: 400,
-      lineHeight: '32px'
+      lineHeight: '32px',
+      ['@media (max-width:600px)']: { // eslint-disable-line no-useless-computed-key
+        fontSize: '16px',
+        fontWeight: 400,
+        lineHeight: '24px'
+      }
     },
     h4: {
       fontSize: '20px',
       fontWeight: 400,
-      lineHeight: '24px'
+      lineHeight: '24px',
+      ['@media (max-width:600px)']: { // eslint-disable-line no-useless-computed-key
+        fontSize: '16px',
+        fontWeight: 400,
+        lineHeight: '24px'
+      }
     },
     p: {
       fontSize: '16px',
