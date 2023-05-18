@@ -41,6 +41,32 @@
             "rate" : 5
         }
     ],
+    "Product Design": [
+        {
+            "title" : "Figma",
+            "rate" : 5
+        },
+        {
+            "title" : "Jira",
+            "rate" : 5
+        },
+        {
+            "title" : "Google Analytics",
+            "rate" : 5
+        },
+        {
+            "title" : "Mixpanel",
+            "rate" : 5
+        },
+        {
+            "title" : "User Research",
+            "rate" : 5
+        },
+        {
+            "title" : "UX Design",
+            "rate" : 5
+        }
+    ],
     "API Development": [
         {
             "title" : "Express.js / NodeJS",
@@ -77,15 +103,7 @@
             "rate" : 5
         },
         {
-            "title" : "Swift",
-            "rate" : 5
-        },
-        {
             "title" : "Rust",
-            "rate" : 5
-        },
-        {
-            "title" : "Dart",
             "rate" : 5
         },
         {
@@ -98,32 +116,6 @@
         },
         {
             "title" : "SQL",
-            "rate" : 5
-        }
-    ],
-    "Product Design": [
-        {
-            "title" : "Figma",
-            "rate" : 5
-        },
-        {
-            "title" : "Jira",
-            "rate" : 5
-        },
-        {
-            "title" : "Google Analytics",
-            "rate" : 5
-        },
-        {
-            "title" : "Mixpanel",
-            "rate" : 5
-        },
-        {
-            "title" : "User Research",
-            "rate" : 5
-        },
-        {
-            "title" : "UX Design",
             "rate" : 5
         }
     ],
