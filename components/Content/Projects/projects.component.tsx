@@ -23,9 +23,9 @@ const ProjectTile = ({project, index}: any) => {
     return (
         <Grid item xs={12} sm={6} md={6} style={{display:'flex', flexDirection:'column', padding:'12px', borderRadius: 20, overflow:'hidden', position:'relative'}}>
             <Box style={{height: '100%', display:'flex', flexDirection:'column', borderRadius: 20, backgroundColor:'#FFF', overflow:'hidden', position:'relative', alignItems:'center'}}>
-                <Box style={{height:'30vh', width:'100%', position:'relative'}}>
-                    <Image src={project.image_uri} fill={true} alt={project.title}/>
-                </Box>
+                {/* <Box style={{height:'30vh', width:'100%', position:'relative'}}> */}
+                    {/* <Image src={project.image_uri} fill={true} alt={project.title}/> */}
+                {/* </Box> */}
                 <Box style={{padding: "20px", display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'space-between', flex: 1}}>
                     <ProjectStatus status={project.status}/>
                     <Box style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center'}}>
