@@ -18,7 +18,7 @@ const Introduction = () => {
                     </Box>
                     {/* @ts-ignore */}
                     <Description variant={'h3'} style={{color:'#FFF'}}>
-                        I am Siddharth. An enthusiastic product developer currently shaping the future of software development by designing smooth user-interfaces that promote user interaction with information and data.
+                        I am Siddharth. An enthusiastic software engineer currently shaping the future of software development by designing smooth user-interfaces that promote user interaction with information and data.
                     </Description>
                 </Box>
             </InnerContainer>

@@ -21,20 +21,39 @@ const Projects = () => {
 
 const ProjectTile = ({project, index}: any) => {
     return (
-        <Grid item xs={12} sm={6} md={4} style={{display:'flex', flexDirection:'column', padding:'12px', borderRadius: 20, overflow:'hidden', position:'relative'}}>
-            <Box style={{height: '100%', display:'flex', flexDirection:'column', borderRadius: 20, backgroundColor:'#FFF', overflow:'hidden', position:'relative'}}>
-                <Box style={{height:320, width:'100%', position:'relative'}}>
+        <Grid item xs={12} sm={6} md={6} style={{display:'flex', flexDirection:'column', padding:'12px', borderRadius: 20, overflow:'hidden', position:'relative'}}>
+            <Box style={{height: '100%', display:'flex', flexDirection:'column', borderRadius: 20, backgroundColor:'#FFF', overflow:'hidden', position:'relative', alignItems:'center'}}>
+                <Box style={{height:'30vh', width:'100%', position:'relative'}}>
                     <Image src={project.image_uri} fill={true} alt={project.title}/>
                 </Box>
-                <Box style={{padding: "20px", display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center'}}>
+                <Box style={{padding: "20px", display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'space-between', flex: 1}}>
                     <ProjectStatus status={project.status}/>
-                    <Typography variant="h3" style={{fontWeight:'bold', textDecoration:'underline'}}><a href={project.url}>{project.title}</a></Typography>
+                    <Box style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center'}}>
+                        <Typography variant="h3" style={{fontWeight:'bold'}}><a href={project.url}>{project.title}</a></Typography>
+                        {/* @ts-ignore */}
+                        <Typography variant="p" style={{color:'#000', textAlign:'center', fontStyle:'italic', textDecoration:'underline'}}>{project.role}</Typography>
+                    </Box>
                     {/* @ts-ignore */}
-                    <Typography variant="p" style={{color:'#000', textAlign:'center'}}>{project.description}</Typography>
+                    <Box style={{display:'flex', flexDirection:'column', justifyContent:'space-between', alignItems:'center', flex: 1, marginTop: 12}}>
+                        {/* @ts-ignore */}
+                        <Typography variant="p" style={{color:'#000', textAlign:'center'}}>{project.description}</Typography>
+                        <Box style={{display:'flex', flexDirection:'row', justifyContent:'center', flexWrap:'wrap', marginTop: 12}}>
+                            {project.tags?.map((tag: any,index: any) => <Tag tag={tag} index={index} key={index}/>)}
+                        </Box> 
+                    </Box>
                 </Box>
             </Box>
             {/* <Typography variant="h2">{project.languages}</Typography> */}
         </Grid>
+    )
+}
+
+const Tag = ({tag, index}: any) => {
+    return (
+        <Box style={{backgroundColor:'#171717', padding:'8px 12px', margin: '4px', borderRadius: 40}}>
+            {/* @ts-ignore */}
+            <Typography variant="p" style={{color:'#FFF', textAlign:'center', fontStyle:'italic'}}>{tag}</Typography>
+        </Box>
     )
 }
 
