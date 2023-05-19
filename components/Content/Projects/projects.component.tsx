@@ -27,7 +27,7 @@ const ProjectTile = ({project, index}: any) => {
                     {/* <Image src={project.image_uri} fill={true} alt={project.title}/> */}
                 {/* </Box> */}
                 <Box style={{padding: "20px", display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'space-between', flex: 1}}>
-                    <ProjectStatus status={project.status}/>
+                    {/* <ProjectStatus status={project.status}/> */}
                     <Box style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center'}}>
                         <Typography variant="h3" style={{fontWeight:'bold'}}><a href={project.url}>{project.title}</a></Typography>
                         {/* @ts-ignore */}
