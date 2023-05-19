@@ -1,9 +1,10 @@
 import { Typography, styled } from "@mui/material";
+import Link from "next/link";
 
 const Sign = () => {
     return (
         // @ts-ignore
-        <StyledSign variant={"p"} style={{}}>Sid</StyledSign>
+        <StyledSign variant={"p"} style={{}}><Link href="#home" scroll={false}>Sid</Link></StyledSign>
     )
 }
 

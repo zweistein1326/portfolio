@@ -17,7 +17,8 @@ const Container = styled('div')(({minHeight, maxWidth = '960px'}: any)=>({
     justifyContent:'center',
     width:'100%',
     maxWidth: maxWidth,
-    marginBottom: '12vh'
+    marginBottom: '12vh',
+    position:'relative'
 }))
 
 export default Content;

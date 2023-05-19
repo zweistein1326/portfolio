@@ -7,7 +7,7 @@ import Image from "next/image";
 const Introduction = () => {
     return (
         // @ts-ignore
-        <Container minHeight={'100vh'}>
+        <Container minHeight={'100vh'} id="home">
             <InnerContainer sx={{px: 2}}>
                 <Box style={{float:'right', margin:'0 0 0 40px', flex:1, display:'flex', flexDirection:'row', justifyContent:'center'}}>
                     <StyledImage src='/images/me.jpg' width={400} height={400} alt="Siddharth Agarwal"/>
