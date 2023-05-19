@@ -5,7 +5,7 @@ const theme = createTheme({
   typography: {
     fontFamily: "'Plus Jakarta Sans', sans-serif",
     allVariants: {
-      color: "#000000",
+      color: "#FFFFFF",
     },
     h1: {
       fontSize: '32px',

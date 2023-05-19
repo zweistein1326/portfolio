@@ -34,7 +34,6 @@ const ButtonContainer = styled(Box)((props: any) => ({
     cursor: 'pointer',
     transition: 'all 0.2s ease-in-out',
     '> *': {
-        color: '#FFF',
         transition: 'all 0.2s ease-in-out',
     },
     '&:hover': {
