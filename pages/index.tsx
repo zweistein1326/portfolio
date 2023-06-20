@@ -22,9 +22,9 @@ export default function Home() {
         <Header/>
         <Introduction />
         <Education />
+        <WorkX />
         <Projects />
         <Skills />
-        <WorkX />
         <Contact />
       </Wrapper>
       {/* <Footer /> */}
