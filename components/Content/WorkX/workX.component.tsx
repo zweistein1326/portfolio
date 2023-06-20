@@ -20,7 +20,12 @@ const WorkX = () => {
 const ResumeButton = () => {
     return (
         <ButtonContainer>
-            <Typography variant="h4" style={{fontSize: 16, fontWeight:'normal', textTransform:'capitalize', WebkitTextStrokeWidth: 0}}><a href="https://drive.google.com/file/d/1DvQCx2WE7tmXvyC11Jk9Oh7LmTiKafcd/view?usp=share_link" target="_blank">View Resume</a></Typography>
+            <Typography 
+                variant="h4" 
+                style={{fontSize: 16, fontWeight:'normal', textTransform:'capitalize', WebkitTextStrokeWidth: 0}}
+            >
+                    <a href="https://drive.google.com/file/d/1NxUTnefiWV99Pgln7eeV4HJoBNzqiiLe/view?usp=sharing" target="_blank">View Resume</a>
+            </Typography>
         </ButtonContainer>
     )
 }
