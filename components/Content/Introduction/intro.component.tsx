@@ -14,11 +14,12 @@ const Introduction = () => {
                 </Box>
                 <Box>
                     <Box style={{margin: '20px 0'}}>
-                        <Intro>Welcome to my homepage!</Intro>
+                        <Intro>Hi! I am Siddharth</Intro>
                     </Box>
                     {/* @ts-ignore */}
                     <Description variant={'h3'} style={{color:'#FFF'}}>
-                        I am Siddharth. An enthusiastic software engineer currently shaping the future of software development by designing smooth user-interfaces that promote user interaction with information and data.
+                        An entreprenuer and software engineer with a keen interest in 
+                        problem solving using latest technologies. Originally from India and currently based in Hong Kong.
                     </Description>
                 </Box>
             </InnerContainer>

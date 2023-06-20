@@ -29,7 +29,7 @@ const ProjectTile = ({project, index}: any) => {
                 <Box style={{padding: "20px", display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'space-between', flex: 1}}>
                     {/* <ProjectStatus status={project.status}/> */}
                     <Box style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center'}}>
-                        <Typography variant="h3" style={{fontWeight:'bold'}}><a href={project.url}>{project.title}</a></Typography>
+                        <Typography variant="h3" style={{fontWeight:'bold', color:'#000'}}><a href={project.url}>{project.title}</a></Typography>
                         {/* @ts-ignore */}
                         <Typography variant="p" style={{color:'#000', textAlign:'center', fontStyle:'italic', textDecoration:'underline'}}>{project.role}</Typography>
                     </Box>
