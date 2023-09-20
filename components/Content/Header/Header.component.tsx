@@ -2,13 +2,7 @@ import { Email, GitHub, LinkedIn, Twitter } from '@mui/icons-material';
 import Sign from './Sign.components';
 import { styled } from '@mui/system';
 import { Box } from '@mui/material';
-
-const socials = {
-    github: 'https://github.com/zweistein1326',
-    linkedin: 'https://www.linkedin.com/in/siddharthagarwal2608/',
-    twitter: 'https://twitter.com/SidAgarwal45',
-    email: 'mailto:hello@sidart.info'
-}
+import { socials } from '@/constants/socials';
 
 const Header = () => {
     return (

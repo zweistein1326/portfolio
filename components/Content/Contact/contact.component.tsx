@@ -1,6 +1,7 @@
 import Content from "@/components/Content/content.component"
 import SectionHeading from "@/components/Content/section-heading.component"
 import { Box, Typography, styled } from "@mui/material"
+import { socials } from "@/constants/socials"
 
 const Contact = () => {
     return (
@@ -10,7 +11,7 @@ const Contact = () => {
             </SectionHeading>
             <StyledBox>
                 {/* @ts-ignore */}
-                <Typography variant="h4" style={{color:'#FFF', textAlign:'center'}}>Would you like me to work with you or vice-versa? Write to me at <a href="mailto:hello@sidart.info" style={{textDecoration:'underline'}}>hello@sidart.info</a></Typography>
+                <Typography variant="h4" style={{color:'#FFF', textAlign:'center'}}>Write to me at <a href={`mailto:${socials.email}`} target="_blank" style={{textDecoration:'underline'}}>{socials.email}</a></Typography>
             </StyledBox>
         </Content>
     )
