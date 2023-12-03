@@ -17,5 +17,6 @@ const StyledContainer = styled('div')((props)=>({
     justifyContent: 'center',
     width: '100%',
     height:'100%',
-    background: 'linear-gradient(110.67deg, #171717 11%, #061127 88.71%, #050A3D 100%)'
+    background: '#FFFEE6',
+    zIndex: 3
 }))

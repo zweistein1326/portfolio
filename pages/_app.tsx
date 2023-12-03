@@ -5,6 +5,7 @@ import theme from '../styles/theme';
 import createEmotionCache from '../styles/createEmotionCache';
 import { EmotionCache } from '@emotion/react';
 import { CssBaseline } from '@mui/material';
+import '../styles/mouse-pointer.css';
 
 interface MyAppProps extends AppProps{
   emotionCache?: EmotionCache;
@@ -12,9 +13,9 @@ interface MyAppProps extends AppProps{
 
 export default function App({ Component, pageProps, emotionCache: clientSideEmotionCache }: MyAppProps) {
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline/>
-      <Component {...pageProps} />
-    </ThemeProvider>
+      <ThemeProvider theme={theme}>
+        <CssBaseline/>
+        <Component {...pageProps} />
+      </ThemeProvider>
   )
 }

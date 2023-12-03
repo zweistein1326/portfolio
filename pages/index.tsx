@@ -10,8 +10,26 @@ import Education from '@/components/Content/Education/education.component'
 import Contact from '@/components/Content/Contact/contact.component'
 
 export default function Home() {
+
+  const onPointerMove = (e: any) => {
+    const mouse_pointer = document.getElementById('mouse-pointer');
+    const {clientX, clientY} = e;
+    if(mouse_pointer){
+      console.log(mouse_pointer);
+      console.log(clientX, clientY);
+      mouse_pointer.animate({
+        left: `${clientX}px`,
+        top: `${clientY}px`
+      }, {duration: 200, fill: 'forwards'}) 
+    }
+  }
+
   return (
-    <>
+    <div onPointerMove={onPointerMove}>
+      {/* <div id="mouse-pointer">
+        <div id="blob"/>
+        <div id="blur"/>
+      </div> */}
       <Head>
         <title>Siddharth Agarwal</title>
         <meta name="description" content="Siddharth's website" />
@@ -28,6 +46,6 @@ export default function Home() {
         <Contact />
       </Wrapper>
       {/* <Footer /> */}
-    </>
+    </div>
   )
 }
