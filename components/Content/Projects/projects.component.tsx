@@ -5,9 +5,10 @@ import Image from "next/image";
 import SectionHeading from "@/components/Content/section-heading.component";
 import theme from "@/styles/theme";
 import styles from "./projects.module.css";
-import { Nunito } from "next/font/google";
+import { Nunito, Prompt } from "next/font/google";
 
 const nunito = Nunito({ subsets: ["latin"], weight: "400" });
+const prompt = Prompt({ subsets: ["latin"], weight: "400" });
 
 const Projects = () => {
   return (
@@ -42,19 +43,24 @@ const ProjectTile = ({ project, index }: any) => {
         position: "relative",
       }}
     >
-      <Box
-        style={{
-          height: "100%",
-          display: "flex",
-          flexDirection: "row",
-          borderRadius: 20,
-          backgroundColor: "#FFF",
-          overflow: "hidden",
-          position: "relative",
-          alignItems: "center",
-          border: `1px solid ${theme.palette.text.secondary}`,
-        }}
-      >
+      <Box className={styles.projectTile}>
+        {!(index % 2) && (
+          <Box
+            style={{
+              height: "100%",
+              width: "40%",
+              position: "relative",
+              float: "left",
+            }}
+          >
+            <Image
+              src={project.image_uri}
+              fill={true}
+              style={{ objectFit: "cover" }}
+              alt={project.title}
+            />
+          </Box>
+        )}
         <Box
           style={{
             padding: "20px",
@@ -81,6 +87,7 @@ const ProjectTile = ({ project, index }: any) => {
                 color: theme.palette.text.primary,
                 fontSize: "1.4rem",
               }}
+              className={prompt.className}
             >
               <a href={project.url}>{project.title}</a>
             </Typography>
@@ -97,20 +104,23 @@ const ProjectTile = ({ project, index }: any) => {
             <ActionButton link={project.url} />
           </Box>
         </Box>
-        <Box
-          style={{
-            height: "100%",
-            width: "40%",
-            position: "relative",
-          }}
-        >
-          <Image
-            src={project.image_uri}
-            fill={true}
-            style={{ objectFit: "cover" }}
-            alt={project.title}
-          />
-        </Box>
+        {index % 2 ? (
+          <Box
+            style={{
+              height: "100%",
+              width: "40%",
+              position: "relative",
+              float: "left",
+            }}
+          >
+            <Image
+              src={project.image_uri}
+              fill={true}
+              style={{ objectFit: "cover" }}
+              alt={project.title}
+            />
+          </Box>
+        ) : null}
       </Box>
     </Grid>
   );
