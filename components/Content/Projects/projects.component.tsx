@@ -4,15 +4,19 @@ import { Box, Grid, Typography } from "@mui/material";
 import Image from "next/image";
 import SectionHeading from "@/components/Content/section-heading.component";
 import theme from "@/styles/theme";
+import styles from "./projects.module.css";
+import { Nunito } from "next/font/google";
+
+const nunito = Nunito({ subsets: ["latin"], weight: "400" });
 
 const Projects = () => {
   return (
-    <Content minHeight="90vh">
+    <Content minHeight="90vh" id="projects">
       <SectionHeading>Projects</SectionHeading>
       {/* Search Bar
         Allow users to search for projects by skill
       */}
-      <Grid container>
+      <Grid container style={{ padding: "0px 6rem" }}>
         {Object.values(data).map((proj, index) => {
           return <ProjectTile project={proj} key={index} index={index} />;
         })}
@@ -26,13 +30,14 @@ const ProjectTile = ({ project, index }: any) => {
     <Grid
       item
       xs={12}
-      sm={6}
-      md={6}
+      sm={12}
+      md={12}
       style={{
         display: "flex",
         flexDirection: "column",
         padding: "12px",
         borderRadius: 20,
+        height: "360px",
         overflow: "hidden",
         position: "relative",
       }}
@@ -41,7 +46,7 @@ const ProjectTile = ({ project, index }: any) => {
         style={{
           height: "100%",
           display: "flex",
-          flexDirection: "column",
+          flexDirection: "row",
           borderRadius: 20,
           backgroundColor: "#FFF",
           overflow: "hidden",
@@ -50,79 +55,81 @@ const ProjectTile = ({ project, index }: any) => {
           border: `1px solid ${theme.palette.text.secondary}`,
         }}
       >
-        {/* <Box style={{height:'30vh', width:'100%', position:'relative'}}> */}
-        {/* <Image src={project.image_uri} fill={true} alt={project.title}/> */}
-        {/* </Box> */}
         <Box
           style={{
             padding: "20px",
             display: "flex",
             flexDirection: "column",
-            alignItems: "center",
+            alignItems: "flex-start",
             justifyContent: "space-between",
             flex: 1,
           }}
         >
-          {/* <ProjectStatus status={project.status}/> */}
           <Box
             style={{
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
-              alignItems: "center",
+              alignItems: "flex-start",
+              gap: 12,
             }}
           >
             <Typography
               variant="h3"
-              style={{ fontWeight: "bold", color: "#000" }}
+              style={{
+                fontWeight: "bold",
+                color: theme.palette.text.primary,
+                fontSize: "1.4rem",
+              }}
             >
               <a href={project.url}>{project.title}</a>
             </Typography>
-            {/* @ts-ignore */}
             <Typography
               style={{
-                color: "#000",
-                textAlign: "center",
-                fontStyle: "italic",
-                textDecoration: "underline",
+                color: theme.palette.text.primary,
+                textAlign: "left",
+                fontSize: "0.9rem",
               }}
+              className={nunito.className}
             >
-              {project.role}
-            </Typography>
-          </Box>
-          {/* @ts-ignore */}
-          <Box
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "space-between",
-              alignItems: "center",
-              flex: 1,
-              marginTop: 12,
-            }}
-          >
-            {/* @ts-ignore */}
-            <Typography style={{ color: "#000", textAlign: "center" }}>
               {project.description}
             </Typography>
-            <Box
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                justifyContent: "flex-start",
-                flexWrap: "wrap",
-                marginTop: 12,
-              }}
-            >
-              {project.tags?.map((tag: any, index: any) => (
-                <Tag tag={tag} index={index} key={index} />
-              ))}
-            </Box>
+            <ActionButton link={project.url} />
           </Box>
         </Box>
+        <Box
+          style={{
+            height: "100%",
+            width: "40%",
+            position: "relative",
+          }}
+        >
+          <Image
+            src={project.image_uri}
+            fill={true}
+            style={{ objectFit: "cover" }}
+            alt={project.title}
+          />
+        </Box>
       </Box>
-      {/* <Typography variant="h2">{project.languages}</Typography> */}
     </Grid>
+  );
+};
+
+const ActionButton = ({ link }: { link: string }) => {
+  return (
+    <a href={link} target="_blank" className={styles.actionButton}>
+      {/* @ts-ignore */}
+      <Typography
+        style={{
+          textAlign: "center",
+          fontStyle: "italic",
+          fontSize: "0.9rem",
+        }}
+      >
+        View Project
+      </Typography>
+    </a>
   );
 };
 

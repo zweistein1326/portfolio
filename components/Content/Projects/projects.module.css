@@ -1,0 +1,25 @@
+.actionButton {
+  background-color: #fff;
+  border: 1px solid var(--foreground-primary);
+  padding: 8px 12px;
+  margin: 4px 0px;
+  border-radius: 40px;
+  transition: all 0.3s ease-in-out;
+}
+
+.actionButton > p {
+  color: var(--foreground-primary);
+  transition: all 0.3s ease-in-out;
+}
+
+.actionButton:hover {
+  background-color: var(--foreground-primary);
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.actionButton:hover > p {
+  transition: all 0.3s ease-in-out;
+  color: #fff;
+}

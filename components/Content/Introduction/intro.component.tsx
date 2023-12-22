@@ -11,9 +11,6 @@ import localFont from "next/font/local";
 import Link from "next/link";
 
 const basic = Bowlby_One_SC({ subsets: ["latin"], weight: "400" });
-const porter_sans_block = localFont({
-  src: "../../../public/fonts/porter_sans_block/porter-sans-inline-block.ttf",
-});
 
 const Introduction = () => {
   const enhance = (id: string) => {
@@ -46,15 +43,15 @@ const Introduction = () => {
             style={{ color: theme.palette.text.primary }}
           >
             <Line className="line">
-              <p className={`${styles.word}`}>HI,</p>
-              <p className={`${styles.word}`}>HALO,</p>
-              <p className={`${styles.word}`}>NAMASKAR</p>
+              <h1 className={`${styles.word}`}>HI,</h1>
+              <h1 className={`${styles.word}`}>HALO,</h1>
+              <h1 className={`${styles.word}`}>NAMASKAR</h1>
             </Line>
             <Line className="line">
-              <p className={`${styles.word}`}>WELCOME</p>
-              <p className={`${styles.word}`}>TO</p>
-              <p className={`${styles.word}`}>MY</p>
-              <p className={`${styles.word}`}>SITE</p>
+              <h1 className={`${styles.word}`}>WELCOME</h1>
+              <h1 className={`${styles.word}`}>TO</h1>
+              <h1 className={`${styles.word}`}>MY</h1>
+              <h1 className={`${styles.word}`}>SITE</h1>
             </Line>
             {/* <Line className="line">
               <p className={`${styles.word}`}>PRODUCT</p>

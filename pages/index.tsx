@@ -8,6 +8,7 @@ import Projects from "@/components/Content/Projects/projects.component";
 import WorkX from "@/components/Content/WorkX/workX.component";
 import Education from "@/components/Content/Education/education.component";
 import Contact from "@/components/Content/Contact/contact.component";
+import AboutMe from "@/components/Content/AboutMe/index.component";
 
 export default function Home() {
   const onPointerMove = (e: any) => {
@@ -42,9 +43,10 @@ export default function Home() {
       <BodyWrapper>
         <Introduction />
         <Education />
-        <WorkX />
+        {/* <AboutMe /> */}
+        {/* <WorkX /> */}
         <Projects />
-        <Skills />
+        {/* <Skills /> */}
         <Contact />
       </BodyWrapper>
       {/* <Footer /> */}

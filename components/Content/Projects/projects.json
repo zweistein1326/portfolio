@@ -2,8 +2,8 @@
   "sports-social": {
     "title": "Neighbourhood",
     "role": "Co-Founder and CTO",
-    "image_uri": "/images/projects/sports-social.png",
-    "description": "HomeTown is a content-sharing platform allowing users to find new events and promotions in their city.",
+    "image_uri": "/images/projects/nbhd.png",
+    "description": "Neighbourhood is a content-sharing platform allowing users to find new events and promotions in their city.",
     "tags": [
       "Expo",
       "React-native",
@@ -18,18 +18,18 @@
   },
   "hollo": {
     "title": "Hollo - Axolotl Control",
-    "role": "Front-end Engineer",
-    "image_uri": "/images/projects/hollo.png",
-    "description": "Axolotl control was a freelance project which I worked on for a couple of months with Hollo ltd.",
+    "role": "Front-end Developer",
+    "image_uri": "/images/projects/hollo.avif",
+    "description": "Axolotl Control is a web application that allows users to assess and improve their mental health with the use of algorithms and AI.",
     "tags": ["React-native-web", "Firebase", "Github"],
     "url": "http://digiact-ceb5f.web.app/",
     "status": "In Progress"
   },
   "parallelchain-explorer": {
     "title": "ParallelChain Explorer",
-    "role": "Full-stack Engineer",
-    "image_uri": "/images/projects/pcl-explorer.png",
-    "description": "ParallelChain Explorer is a web interface that allows users to view the blocks and transactions on the ParallelChain blockchain.",
+    "role": "Product Designer and Developer",
+    "image_uri": "/images/projects/pcl_logo.png",
+    "description": "ParallelChain Explorer is a blockchain explorer that allows users to view transactions, blocks, and other information stored on the ParallelChain blockchain.",
     "url": "https://explorer.parallelchain.io",
     "tags": [
       "Figma",
@@ -43,27 +43,10 @@
     ],
     "status": "Finished"
   },
-  "payphone": {
-    "title": "PayPhone",
-    "role": "Co-Founder and CTO",
-    "image_uri": "/images/projects/payphone.png",
-    "description": "PayPhone is a mobile application that allows users to make payments using their face.",
-    "tags": [
-      "Figma",
-      "Python",
-      "openCV",
-      "React-native",
-      "NodeJS",
-      "MongoDB",
-      "Github"
-    ],
-    "url": "https://www.payphone.hk",
-    "status": "Finished"
-  },
   "algol": {
     "title": "Algol",
-    "role": "Backend and Smart Contract developer",
-    "image_uri": "/images/projects/algol.png",
+    "role": "Application Architect and Developer",
+    "image_uri": "/images/projects/algol.jpeg",
     "description": "Algol is a service built using ERC721 protocol that allows admins to issue and manage credentials like passports, degree certs, transcripts, medical records etc.",
     "tags": [
       "Figma",
@@ -76,7 +59,7 @@
       "Firebase",
       "Github"
     ],
-    "url": "",
+    "url": "https://github.com/zweistein1326/FYP21050",
     "status": "Finished"
   }
 }

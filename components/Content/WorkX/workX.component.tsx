@@ -11,7 +11,7 @@ const WorkX = () => {
       <Box
         style={{
           display: "flex",
-          flexDirection: "row",
+          flexDirection: "column",
           alignItems: "center",
           justifyContent: "space-between",
           width: "100%",
@@ -59,8 +59,10 @@ const ButtonContainer = styled(Box)((props: any) => ({
   color: theme.palette.text.secondary,
   cursor: "pointer",
   transition: "all 0.2s ease-in-out",
-  "> *": {
+  "> h4": {
     color: theme.palette.text.secondary,
+  },
+  "> *": {
     transition: "all 0.2s ease-in-out",
   },
   "&:hover": {
@@ -77,19 +79,21 @@ const WorkTile = ({ item, index }: any) => {
       style={{
         display: "flex",
         flexDirection: "column",
-        alignItems: "center",
+        alignItems: "flex-start",
         justifyContent: "center",
-        minWidth: "320px",
         flex: 1,
+        backgroundColor: "#FFF",
+        border: `2px solid ${theme.palette.text.secondary}`,
+        borderRadius: 12,
+        padding: 12,
       }}
     >
       <Typography
-        variant="h2"
+        variant="h3"
         style={{
           color: theme.palette.text.primary,
           textAlign: "center",
           fontWeight: "bold",
-          textDecoration: "underline",
         }}
       >
         <a href={item.url} target="_blank">

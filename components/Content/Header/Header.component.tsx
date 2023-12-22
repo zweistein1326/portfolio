@@ -4,42 +4,23 @@ import { styled } from "@mui/system";
 import { Box } from "@mui/material";
 import { socials } from "@/constants/socials";
 import theme from "@/styles/theme";
+import Link from "next/link";
 
 const Header = () => {
   return (
     <Container>
       <StyledHeader>
         <Sign />
-        <div style={{ paddingLeft: 24 }}>
-          <SocialIconsContainer
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              listStyleType: "none",
-              color: theme.palette.text.secondary,
-            }}
-          >
-            <li style={{ marginLeft: 20 }}>
-              <a href={socials.github}>
-                <GitHub />
-              </a>
-            </li>
-            <li style={{ marginLeft: 20 }}>
-              <a href={socials.linkedin}>
-                <LinkedIn />
-              </a>
-            </li>
-            <li style={{ marginLeft: 20 }}>
-              <a href={socials.twitter}>
-                <Twitter />
-              </a>
-            </li>
-            <li style={{ marginLeft: 20 }}>
-              <a href={socials.email}>
-                <Email />
-              </a>
-            </li>
-          </SocialIconsContainer>
+        <div style={{ display: "flex", flexDirection: "row", gap: "2rem" }}>
+          <Link href="#edu">
+            <p>Education</p>
+          </Link>
+          <Link href="#projects">
+            <p>Projects</p>
+          </Link>
+          <Link href="#contact">
+            <p>Contact</p>
+          </Link>
         </div>
       </StyledHeader>
     </Container>
