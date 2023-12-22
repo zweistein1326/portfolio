@@ -12,6 +12,7 @@ import AboutMe from "@/components/Content/AboutMe/index.component";
 import { useCallback, useEffect } from "react";
 
 export default function Home() {
+  let previous_offset = 0;
   const onPointerMove = (e: any) => {
     const mouse_pointer = document.getElementById("mouse-pointer");
     const { clientX, clientY } = e;
@@ -30,16 +31,19 @@ export default function Home() {
 
   const onScroll = useCallback((event: any) => {
     const { pageYOffset, scrollY } = window;
-    console.log("yOffset", pageYOffset, "scrollY", scrollY);
-    console.log(window.pageYOffset);
 
-    if (pageYOffset > 0) {
-      const navbar = document.getElementById("navbar");
-      navbar?.classList.add("dark");
-    } else if (pageYOffset === 0) {
-      const navbar = document.getElementById("navbar");
-      navbar?.classList.remove("dark");
+    const navbar = document.getElementById("navbar");
+    if (previous_offset < pageYOffset) {
+      navbar?.classList.add("visible");
+      navbar?.classList.add("shadow");
+    } else if (previous_offset > pageYOffset) {
+      navbar?.classList.remove("visible");
+      navbar?.classList.add("shadow");
     }
+    if (pageYOffset === 0) {
+      navbar?.classList.remove("shadow");
+    }
+    previous_offset = pageYOffset;
   }, []);
 
   useEffect(() => {

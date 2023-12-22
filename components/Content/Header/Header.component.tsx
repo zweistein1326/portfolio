@@ -37,7 +37,7 @@ const Container = styled("div")((props) => ({
   alignItems: "center",
   justifyContent: "center",
   height: "10vh",
-  //   background: "rgba(0,0,0,0.4)",
+  background: `${theme.palette.background.default}dd`,
   //   boxShadow: "0px 0px 4px rgba(0, 0, 0, 0.1)",
   left: 0,
   width: "100%",

@@ -71,6 +71,9 @@ const theme = createTheme({
       primary: "#25282B",
       secondary: "#5D4C38",
     },
+    background: {
+      default: "#fffee6",
+    },
     primary: {
       main: "#0066FF",
     },
@@ -81,6 +84,7 @@ const theme = createTheme({
       main: red.A400,
     },
   },
+
   breakpoints: {
     values: {
       xs: 0,
