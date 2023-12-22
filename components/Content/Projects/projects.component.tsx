@@ -7,6 +7,7 @@ import theme from "@/styles/theme";
 import styles from "./projects.module.css";
 import { Nunito, Prompt } from "next/font/google";
 import { useEffect, useState } from "react";
+import { Download } from "@mui/icons-material";
 
 const nunito = Nunito({ subsets: ["latin"], weight: "400" });
 const prompt = Prompt({ subsets: ["latin"], weight: "400" });
@@ -23,6 +24,15 @@ const Projects = () => {
           return <ProjectTile project={proj} key={index} index={index} />;
         })}
       </Grid>
+      <a
+        id="resume"
+        className="button"
+        href="https://drive.google.com/file/d/1-FyJCYMAwzCannsTv1OusuHKNfkPs-3o/view?usp=sharing"
+        target="_blank"
+      >
+        <Download />
+        View Resume
+      </a>
     </Content>
   );
 };
