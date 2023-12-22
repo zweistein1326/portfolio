@@ -6,7 +6,7 @@ import SectionHeading from "@/components/Content/section-heading.component";
 import theme from "@/styles/theme";
 import styles from "./projects.module.css";
 import { Nunito, Prompt } from "next/font/google";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const nunito = Nunito({ subsets: ["latin"], weight: "400" });
 const prompt = Prompt({ subsets: ["latin"], weight: "400" });
@@ -28,13 +28,22 @@ const Projects = () => {
 };
 
 const ProjectTile = ({ project, index }: any) => {
-  const mediaQuery = useMediaQuery("(max-width: 960px)");
+  const mediaQuery = useMediaQuery("(max-width: 720px)");
+  const [isInfoVisible, setInfoVisible] = useState(false);
 
   const handleClick = () => {
-    const projectInfo = document.getElementById(
+    const cardImage = document.getElementById(
       `${index}-${styles.projectImage}`
     );
-    projectInfo?.classList.add(styles.reveal);
+    if (cardImage) {
+      cardImage.style.transition = "opacity 0.5s ease-in-out";
+      if (isInfoVisible) {
+        cardImage.style.opacity = "1";
+      } else {
+        cardImage.style.opacity = "0";
+      }
+      isInfoVisible ? setInfoVisible(false) : setInfoVisible(true);
+    }
   };
 
   return (
@@ -77,6 +86,7 @@ const ProjectTile = ({ project, index }: any) => {
               width: "100%",
             }}
             id={`${index}-${styles.projectImage}`}
+            className={styles.projectImage}
           >
             <Image
               src={project.image_uri}
@@ -84,35 +94,9 @@ const ProjectTile = ({ project, index }: any) => {
               style={{ objectFit: "cover" }}
               alt={project.title}
             />
-            <button
-              onClick={handleClick}
-              style={{
-                position: "absolute",
-                bottom: 12,
-                right: 20,
-                color: "#FFF",
-                fontSize: "0.9rem",
-                backgroundColor: "transparent",
-                boxShadow: "none",
-                border: "none",
-                fontWeight: "bold",
-              }}
-            >
-              -&gt; View
-            </button>
           </Box>
         )}
-        <Box
-          className={styles.projectInfo}
-          style={{
-            padding: "20px",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "flex-start",
-            justifyContent: "space-between",
-            flex: 1,
-          }}
-        >
+        <Box className={styles.projectInfo}>
           <Box
             style={{
               display: "flex",
@@ -162,6 +146,31 @@ const ProjectTile = ({ project, index }: any) => {
             />
           </Box>
         ) : null}
+        {mediaQuery && (
+          <button
+            onClick={handleClick}
+            style={{
+              position: "absolute",
+              top: 12,
+              right: 12,
+              backgroundColor: isInfoVisible
+                ? theme.palette.text.secondary
+                : "#FFF",
+              padding: "8px 12px",
+              boxShadow: "none",
+              border: "none",
+              borderRadius: 20,
+            }}
+          >
+            <p
+              style={{
+                fontWeight: "bold",
+                fontSize: "0.75rem",
+                color: !isInfoVisible ? theme.palette.text.secondary : "#FFF",
+              }}
+            >{`${isInfoVisible ? "Hide" : "Read"}`}</p>
+          </button>
+        )}
       </Box>
     </Grid>
   );
