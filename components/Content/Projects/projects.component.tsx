@@ -29,7 +29,6 @@ const Projects = () => {
 
 const ProjectTile = ({ project, index }: any) => {
   const mediaQuery = useMediaQuery("(max-width: 960px)");
-  console.log(mediaQuery);
 
   const handleClick = () => {
     const projectInfo = document.getElementById(
