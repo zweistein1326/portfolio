@@ -5,6 +5,7 @@ import { socials } from "@/constants/socials";
 import theme from "@/styles/theme";
 import { Email, GitHub, LinkedIn, Twitter } from "@mui/icons-material";
 import { Nunito } from "next/font/google";
+import styles from "./contact.module.css";
 
 const nunito = Nunito({ subsets: ["latin"], weight: "400" });
 
@@ -19,26 +20,25 @@ const Contact = () => {
               display: "flex",
               flexDirection: "row",
               listStyleType: "none",
-              color: theme.palette.text.secondary,
               gap: 20,
             }}
           >
-            <li>
+            <li className={styles.socialLink}>
               <a href={socials.github} target="_blank">
                 <GitHub />
               </a>
             </li>
-            <li>
+            <li className={styles.socialLink}>
               <a href={socials.linkedin} target="_blank">
                 <LinkedIn />
               </a>
             </li>
-            <li>
+            <li className={styles.socialLink}>
               <a href={socials.twitter} target="_blank">
                 <Twitter />
               </a>
             </li>
-            <li>
+            <li className={styles.socialLink}>
               <a href={socials.email} target="_blank">
                 <Email />
               </a>
