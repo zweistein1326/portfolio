@@ -1,0 +1,41 @@
+#mouse-pointer{
+    position: absolute;
+    width: 40px;
+    aspect-ratio: 1;
+    left: -50%;
+    top: -50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    animation: rotate 20s infinite;
+    overflow: hidden;
+    z-index: 4;
+}
+
+#blob {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: linear-gradient(to right,aquamarine,mediumpurple);
+    filter: blur(30px);
+}
+
+/* #blur {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    backdrop-filter: blur(100px);
+} */
+
+@keyframes rotate {
+    from {
+        rotate: 0deg;
+    }
+    to {
+        rotate: 360deg;
+    }
+}

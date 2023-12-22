@@ -1,0 +1,102 @@
+#description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 2rem 0;
+  text-align: center;
+  font-family: porter_sans_block;
+  font-size: 3rem;
+}
+
+.word {
+  display: inline-block;
+  position: relative;
+  transition: transform 350ms ease;
+  font-weight: 500;
+  color: #a87a57;
+}
+
+.fancy {
+  cursor: pointer;
+}
+
+.fancy > .letter {
+  display: inline-block;
+  position: relative;
+  transition: transform 350ms ease;
+  font-weight: 700;
+  color: #0a0c0b;
+}
+
+.fancy:hover > .letter {
+  transition-duration: 800ms;
+}
+
+.fancy:hover > .letter:nth-child(1) {
+  transform: translate(-10%, 20%) rotate(10deg);
+}
+.fancy:hover > .letter:nth-child(2) {
+  transform: translate(-40%, 10%) rotate(4deg);
+}
+.fancy:hover > .letter:nth-child(3) {
+  transform: translate(-50%, -10%) rotate(-8deg);
+}
+.fancy:hover > .letter:nth-child(4) {
+  transform: translate(-10%, 20%) rotate(8deg);
+}
+.fancy:hover > .letter:nth-child(5) {
+  transform: translate(10%, -15%) rotate(10deg);
+}
+.fancy:hover > .letter:nth-child(6) {
+  transform: translate(20%, 10%) rotate(10deg);
+}
+.fancy:hover > .letter:nth-child(7) {
+  transform: translate(40%, -10%) rotate(10deg);
+}
+.fancy:hover > .letter:nth-child(8) {
+  transform: translate(50%, 40%) rotate(20deg);
+}
+.fancy:hover > .letter:nth-child(9) {
+  transform: translate(60%, 40%) rotate(1deg);
+}
+.fancy:hover > .letter:nth-child(10) {
+  transform: translate(60%, 40%) rotate(1deg);
+}
+.fancy:hover > .letter:nth-child(11) {
+  transform: translate(60%, 40%) rotate(1deg);
+}
+.fancy:hover > .letter:nth-child(12) {
+  transform: translate(60%, 40%) rotate(1deg);
+}
+.fancy:hover > .letter:nth-child(13) {
+  transform: translate(60%, 40%) rotate(1deg);
+}
+
+#description:has(.fancy:hover) .word:not(.fancy:hover) {
+  opacity: 0.2;
+}
+
+.arrow {
+  position: absolute;
+  bottom: 48px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  from {
+    bottom: 48px;
+  }
+  70% {
+    bottom: 80px;
+  }
+  to {
+    bottom: 48px;
+  }
+}
+
+.arrow:hover {
+  position: absolute;
+  bottom: 48px;
+  animation-play-state: paused;
+}

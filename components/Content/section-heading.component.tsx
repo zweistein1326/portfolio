@@ -1,27 +1,26 @@
+import theme from "@/styles/theme";
 import { styled } from "@mui/material";
+import { Reenie_Beanie } from "next/font/google";
 
-const SectionHeading = ({children}: any) => {
-    return (
-        <Heading>
-            {children}
-        </Heading>
-    )
-}
+const reenie_beanie = Reenie_Beanie({ subsets: ["latin"], weight: "400" });
 
-const Heading = styled('h1')((props: any)=>({
-    fontStyle: 'normal',
-    fontWeight: 700,
-    fontSize: '48px',
-    lineHeight: '60px',
-    color: "#000000",
-    textShadow: '0px 0px 2px #FFFFFF',
-    WebkitTextStrokeWidth: 2,
-    WebkitTextStrokeColor: '#FFFFFF',
-    textTransform:'uppercase',
-    padding: '5vh 0',
-    [props.theme.breakpoints.down('md')]: {
-        fontSize: '36px',
-    },
-}))
+const SectionHeading = ({ children }: any) => {
+  return <Heading className={reenie_beanie.className}>{children}</Heading>;
+};
+
+const Heading = styled("h2")((props: any) => ({
+  fontStyle: "normal",
+  fontWeight: 400,
+  fontSize: "48px",
+  lineHeight: "60px",
+  color: theme.palette.text.primary,
+  borderBottom: `4px solid ${theme.palette.text.secondary}`,
+  marginBottom: "3rem",
+  [props.theme.breakpoints.down("md")]: {
+    fontSize: "36px",
+  },
+  minWidth: "20vw",
+  textAlign: "center",
+}));
 
 export default SectionHeading;
