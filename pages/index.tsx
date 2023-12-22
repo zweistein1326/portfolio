@@ -9,6 +9,7 @@ import WorkX from "@/components/Content/WorkX/workX.component";
 import Education from "@/components/Content/Education/education.component";
 import Contact from "@/components/Content/Contact/contact.component";
 import AboutMe from "@/components/Content/AboutMe/index.component";
+import { useCallback, useEffect } from "react";
 
 export default function Home() {
   const onPointerMove = (e: any) => {
@@ -26,6 +27,24 @@ export default function Home() {
       );
     }
   };
+
+  const onScroll = useCallback((event: any) => {
+    const { pageYOffset, scrollY } = window;
+    console.log("yOffset", pageYOffset, "scrollY", scrollY);
+    console.log(window.pageYOffset);
+
+    if (pageYOffset > 0) {
+      const navbar = document.getElementById("navbar");
+      navbar?.classList.add("dark");
+    } else if (pageYOffset === 0) {
+      const navbar = document.getElementById("navbar");
+      navbar?.classList.remove("dark");
+    }
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("scroll", onScroll, { passive: true });
+  }, []);
 
   return (
     <div onPointerMove={onPointerMove}>

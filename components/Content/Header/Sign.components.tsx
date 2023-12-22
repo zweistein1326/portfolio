@@ -53,7 +53,7 @@ const Sign = () => {
 
   return (
     // @ts-ignore
-    <StyledSign variant={"p"} onMouseEnter={mouseEnter}>
+    <StyledSign variant={"p"} onMouseEnter={mouseEnter} id="sign">
       <Link href="#home" id="signature" scroll={false}>
         Sid
       </Link>

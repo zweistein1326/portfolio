@@ -19,7 +19,7 @@ const Heading = styled("h2")((props: any) => ({
   [props.theme.breakpoints.down("md")]: {
     fontSize: "36px",
   },
-  minWidth: "40vw",
+  minWidth: "20vw",
   textAlign: "center",
 }));
 

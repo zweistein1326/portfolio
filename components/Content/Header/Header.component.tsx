@@ -8,17 +8,17 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <Container>
+    <Container id="navbar">
       <StyledHeader>
         <Sign />
         <div style={{ display: "flex", flexDirection: "row", gap: "2rem" }}>
-          <Link href="#edu">
+          <Link href="#edu" className="nav-link" scroll={false}>
             <p>Education</p>
           </Link>
-          <Link href="#projects">
+          <Link href="#projects" className="nav-link" scroll={false}>
             <p>Projects</p>
           </Link>
-          <Link href="#contact">
+          <Link href="#contact" className="nav-link" scroll={false}>
             <p>Contact</p>
           </Link>
         </div>

@@ -155,3 +155,22 @@ p {
   font-size: 0.9rem;
   color: #828282;
 }
+
+#navbar {
+  transition: all 0.5s ease;
+}
+
+.dark {
+  transform: translateY(-10vh);
+  transition: all 0.5s ease;
+  /* background-color: #5d4c38ee; */
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.dark > header > #sign {
+  color: #fff;
+}
+
+.dark > header > div > .nav-link > p {
+  color: #fff;
+}

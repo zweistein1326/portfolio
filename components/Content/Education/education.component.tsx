@@ -8,13 +8,13 @@ const education = [
   {
     name: "The University of Hong Kong",
     degree: "Bachelor of Engineering in Computer Science",
-    // duration: "Aug'18-May'22",
+    duration: "Aug'18-June'22",
     logo: "/images/education/hku.svg",
   },
   {
     name: "Delhi Public School, R.K. Puram",
     degree: "High School",
-    // duration: "Aug'18-May'22",
+    duration: "May'15-April'17",
     logo: "/images/education/dps_logo.png",
   },
 ];
@@ -60,10 +60,14 @@ const Tile = ({ ed, index }: { ed: any; index: number }) => {
         {ed.name}
       </Typography>
       <Typography
-        variant="h4"
         style={{ textAlign: "center", color: theme.palette.text.primary }}
       >
         {ed.degree}
+      </Typography>
+      <Typography
+        style={{ textAlign: "center", color: theme.palette.text.primary }}
+      >
+        {ed.duration}
       </Typography>
       {/* <Typography
           variant="h3"
