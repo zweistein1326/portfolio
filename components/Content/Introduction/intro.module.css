@@ -76,3 +76,27 @@
 #description:has(.fancy:hover) .word:not(.fancy:hover) {
   opacity: 0.2;
 }
+
+.arrow {
+  position: absolute;
+  bottom: 48px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  from {
+    bottom: 48px;
+  }
+  70% {
+    bottom: 80px;
+  }
+  to {
+    bottom: 48px;
+  }
+}
+
+.arrow:hover {
+  position: absolute;
+  bottom: 48px;
+  animation-play-state: paused;
+}

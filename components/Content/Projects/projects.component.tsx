@@ -1,11 +1,12 @@
 import Content from "@/components/Content/content.component";
 import data from "./projects.json";
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography, useMediaQuery } from "@mui/material";
 import Image from "next/image";
 import SectionHeading from "@/components/Content/section-heading.component";
 import theme from "@/styles/theme";
 import styles from "./projects.module.css";
 import { Nunito, Prompt } from "next/font/google";
+import { useEffect } from "react";
 
 const nunito = Nunito({ subsets: ["latin"], weight: "400" });
 const prompt = Prompt({ subsets: ["latin"], weight: "400" });
@@ -17,7 +18,7 @@ const Projects = () => {
       {/* Search Bar
         Allow users to search for projects by skill
       */}
-      <Grid container style={{ padding: "0px 6rem" }}>
+      <Grid container className={styles.tileContainer}>
         {Object.values(data).map((proj, index) => {
           return <ProjectTile project={proj} key={index} index={index} />;
         })}
@@ -27,6 +28,16 @@ const Projects = () => {
 };
 
 const ProjectTile = ({ project, index }: any) => {
+  const mediaQuery = useMediaQuery("(max-width: 960px)");
+  console.log(mediaQuery);
+
+  const handleClick = () => {
+    const projectInfo = document.getElementById(
+      `${index}-${styles.projectImage}`
+    );
+    projectInfo?.classList.add(styles.reveal);
+  };
+
   return (
     <Grid
       item
@@ -44,13 +55,12 @@ const ProjectTile = ({ project, index }: any) => {
       }}
     >
       <Box className={styles.projectTile}>
-        {!(index % 2) && (
+        {!(index % 2) && !mediaQuery && (
           <Box
             style={{
               height: "100%",
               width: "40%",
               position: "relative",
-              float: "left",
             }}
           >
             <Image
@@ -61,7 +71,40 @@ const ProjectTile = ({ project, index }: any) => {
             />
           </Box>
         )}
+        {mediaQuery && (
+          <Box
+            style={{
+              height: 400,
+              width: "100%",
+            }}
+            id={`${index}-${styles.projectImage}`}
+          >
+            <Image
+              src={project.image_uri}
+              fill={true}
+              style={{ objectFit: "cover" }}
+              alt={project.title}
+            />
+            <button
+              onClick={handleClick}
+              style={{
+                position: "absolute",
+                bottom: 12,
+                right: 20,
+                color: "#FFF",
+                fontSize: "0.9rem",
+                backgroundColor: "transparent",
+                boxShadow: "none",
+                border: "none",
+                fontWeight: "bold",
+              }}
+            >
+              -&gt; View
+            </button>
+          </Box>
+        )}
         <Box
+          className={styles.projectInfo}
           style={{
             padding: "20px",
             display: "flex",
@@ -89,7 +132,7 @@ const ProjectTile = ({ project, index }: any) => {
               }}
               className={prompt.className}
             >
-              <a href={project.url}>{project.title}</a>
+              {project.title}
             </Typography>
             <Typography
               style={{
@@ -104,13 +147,12 @@ const ProjectTile = ({ project, index }: any) => {
             <ActionButton link={project.url} />
           </Box>
         </Box>
-        {index % 2 ? (
+        {index % 2 && !mediaQuery ? (
           <Box
             style={{
               height: "100%",
               width: "40%",
               position: "relative",
-              float: "left",
             }}
           >
             <Image

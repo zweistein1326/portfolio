@@ -88,12 +88,10 @@ const Introduction = () => {
           />
         </Box> */}
       </InnerContainer>
-      <Link href="#edu">
+      <Link href="#edu" scroll={false} className={styles.arrow}>
         <Box
           style={{
             height: "10vh",
-            position: "absolute",
-            bottom: 48,
             display: "flex",
             flexDirection: "row",
             alignItems: "flex-end",
@@ -113,6 +111,7 @@ const Introduction = () => {
 const Line = styled("div")((props) => ({
   display: "flex",
   flexDirection: "row",
+  flexWrap: "wrap",
   width: "100%",
   justifyContent: "center",
   gap: 12,

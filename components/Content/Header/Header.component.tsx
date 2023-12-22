@@ -48,7 +48,7 @@ const Container = styled("div")((props) => ({
   },
 }));
 
-const StyledHeader = styled("header")({
+const StyledHeader = styled("header")((props) => ({
   display: "flex",
   flexDirection: "row",
   alignItems: "center",
@@ -56,6 +56,10 @@ const StyledHeader = styled("header")({
   width: "100vw",
   padding: 12 * 4,
   maxWidth: "960px",
-});
+  [props.theme.breakpoints.down("md")]: {
+    height: "8vh",
+    padding: "0 16px",
+  },
+}));
 
 export default Header;

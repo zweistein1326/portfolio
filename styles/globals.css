@@ -174,3 +174,9 @@ p {
 .dark > header > div > .nav-link > p {
   color: #fff;
 }
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
