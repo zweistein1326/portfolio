@@ -10,6 +10,7 @@ import styles from "./contact.module.css";
 const nunito = Nunito({ subsets: ["latin"], weight: "400" });
 
 const Contact = () => {
+  const year = new Date().getFullYear();
   return (
     <Content id="contact">
       <StyledBox>
@@ -49,7 +50,7 @@ const Contact = () => {
           style={{ color: theme.palette.text.secondary, opacity: 0.6 }}
           className={nunito.className}
         >
-          Siddharth Agarwal 2023
+          Siddharth Agarwal {year}
         </Typography>
       </StyledBox>
     </Content>
