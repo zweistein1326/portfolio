@@ -19,7 +19,7 @@ const StyledContainer = styled("div")((props) => ({
   height: "100%",
   background: "#FFFEE6",
   zIndex: 3,
-  padding: "0px 48px",
+  padding: "0px 20px",
 }));
 
 const SubContainer = styled("div")((props) => ({

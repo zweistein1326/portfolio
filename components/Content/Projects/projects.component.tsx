@@ -39,8 +39,10 @@ const ProjectTile = ({ project, index }: any) => {
       cardImage.style.transition = "opacity 0.5s ease-in-out";
       if (isInfoVisible) {
         cardImage.style.opacity = "1";
+        cardImage.style.pointerEvents = "all";
       } else {
         cardImage.style.opacity = "0";
+        cardImage.style.pointerEvents = "none";
       }
       isInfoVisible ? setInfoVisible(false) : setInfoVisible(true);
     }
