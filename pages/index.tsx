@@ -31,7 +31,6 @@ export default function Home() {
 
   const onScroll = useCallback((event: any) => {
     const { pageYOffset, scrollY } = window;
-
     const navbar = document.getElementById("navbar");
     if (previous_offset < pageYOffset) {
       navbar?.classList.add("visible");
