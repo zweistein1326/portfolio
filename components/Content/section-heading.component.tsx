@@ -2,7 +2,11 @@ import theme from "@/styles/theme";
 import { styled } from "@mui/material";
 import { Reenie_Beanie } from "next/font/google";
 
-const reenie_beanie = Reenie_Beanie({ subsets: ["latin"], weight: "400" });
+const reenie_beanie = Reenie_Beanie({
+  subsets: ["latin"],
+  weight: "400",
+  display: "swap",
+});
 
 const SectionHeading = ({ children }: any) => {
   return <Heading className={reenie_beanie.className}>{children}</Heading>;
