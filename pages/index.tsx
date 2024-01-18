@@ -57,7 +57,7 @@ export default function Home() {
       </div> */}
       <Head>
         <title>Siddharth Agarwal</title>
-        <meta name="description" content="Siddharth's website" />
+        <meta name="description" content="Siddharth's portfolio" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

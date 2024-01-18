@@ -51,7 +51,7 @@ const Introduction = () => {
               <h1 className={`${styles.word}`}>WELCOME</h1>
               <h1 className={`${styles.word}`}>TO</h1>
               <h1 className={`${styles.word}`}>MY</h1>
-              <h1 className={`${styles.word}`}>SITE</h1>
+              <h1 className={`${styles.word}`}>PORTFOLIO</h1>
             </Line>
             {/* <Line className="line">
               <p className={`${styles.word}`}>PRODUCT</p>
