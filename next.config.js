@@ -5,7 +5,7 @@ const nextConfig = {
     {
       source: "/neighbourhood",
       destination:
-        "https://drive.google.com/file/d/1UBQYMCu-tU5pVq5E4erYFvJ0TwJcb3Rd/view?usp=drive_link",
+        "https://drive.google.com/file/d/1IW0VC1f_wkAP5YcHwZcjbXYolqOP34Fq/view?usp=drive_link",
       permanent: true,
       basePath: false,
     },
