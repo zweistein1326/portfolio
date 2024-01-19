@@ -4,8 +4,7 @@ const nextConfig = {
   redirects: async () => [
     {
       source: "/neighbourhood",
-      destination:
-        "https://drive.google.com/file/d/1IW0VC1f_wkAP5YcHwZcjbXYolqOP34Fq/view?usp=drive_link",
+      destination: "https://www.youtube.com/watch?v=qidFgFfNroc",
       permanent: true,
       basePath: false,
     },
